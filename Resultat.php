@@ -41,9 +41,12 @@
         <div class="action">
             <button type="button" class="btn-primary">▶ Continuer ce Quizz</button>
             <button type="button" class="btn-secondary">⇄ Charger un autre Quizz</button>
+            <button type="button" class="btn-secondary">by Msa_Sid :  <a href="https://github.com/MsaSid06/quizz">Github</a></button>
+             
         </div>
     </div>
 
 </body>
 <script src="./Js/Resultat.js"></script>
 </html>
+<!-- // http://localhost/quizz/Resultat.php -->

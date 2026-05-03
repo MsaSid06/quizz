@@ -7,9 +7,10 @@
 }
 
 body {
-  min-height: 100vh;
+  min-height: 100dvh;
   width: 100vw;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   background: radial-gradient(
     ellipse at 60% 20%,
     #1a1060 0%,
@@ -20,6 +21,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 16px 0;
 }
 
 .card {
@@ -172,4 +174,73 @@ h2 {
 .btn-secondary:hover {
   background: rgba(255, 255, 255, 0.06);
   border-color: rgba(255, 255, 255, 0.35);
+}
+
+/* ── Tablettes / petits écrans ── */
+@media (max-width: 1330px) {
+  .etoile span {
+    font-size: 70px;
+  }
+  .score-row {
+    margin-bottom: 20px;
+  }
+}
+
+/* ── Mobile ── */
+@media (max-width: 480px) {
+  .card {
+    padding: 28px 20px;
+    border-radius: 18px;
+  }
+
+  .trophy {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+    margin-bottom: 18px;
+  }
+
+  .timer-pill {
+    font-size: 13px;
+    padding: 6px 14px;
+    margin-bottom: 18px;
+  }
+
+  .etoile {
+    gap: 6px;
+    margin-bottom: 20px;
+  }
+
+  .etoile span {
+    font-size: 44px;
+  }
+
+  .score-row {
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+
+  .score-box {
+    padding: 10px 14px;
+  }
+
+  .score-box .val {
+    font-size: 18px;
+  }
+
+  .score-box .lbl {
+    font-size: 11px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    font-size: 14px;
+    padding: 12px;
+  }
 }

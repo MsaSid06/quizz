@@ -6,17 +6,6 @@
 body {
   height: 100vh;
   width: 100vw;
-  /* background: #001124;
-  background: radial-gradient(
-    circle,
-    rgba(0, 17, 36, 0.93) 37%, */
-  /* rgba(9, 9, 121, 1) 75%,
-    rgba(8, 28, 134, 1) 85%,
-    rgba(5, 97, 179, 1) 100%,
-    rgba(0, 212, 255, 1) 73%
-  );
-  background-repeat: no-repeat; */
-
   background-color: #121212;
   background-size: 100%;
   font-family: "Times New Roman", Times, serif;
@@ -170,5 +159,126 @@ body {
   font-size: 2em;
   color: #ff4500;
   background-color: #000000;
+}
+
+
+/* Responsiviter */
+
+@media (max-width: 1330px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    height: 60vh;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+  }
+  .niveau {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+  }
+  .level {
+    text-align: center;
+    padding: 20px;
+    padding-bottom: 40px;
+    margin: 10px;
+    width: 5rem;
+    height: 3rem;
+    color: #f5f227;
+    background-color: black;
+    font-size: large;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 500;
+    border-radius: 5px;
+  }
+  .Question {
+    font-size: medium;
+    font-weight: 700;
+    color: rgb(255, 248, 248);
+    width: 400px;
+    height: 300px;
+    /* border: solid 1px black; */
+    padding: 30px;
+    margin: 10px;
+    /* -left: 70px; */
+    box-shadow:
+      rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px,
+      rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px,
+      rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+    border-radius: 20px;
+    opacity: 0;
+    transform: translateY(12px);
+    transition:
+      opacity 0.5s ease,
+      transform 0.5s ease;
+  }
+  .trouver {
+    color: black;
+    background-color: #f5f227;
+    box-shadow: 0 0 40px #f5f227;
+    opacity: 1;
+  }
+
+  .fausser {
+    background-color: #f5f227;
+    color: black;
+    opacity: 0.5;
+  }
+  .shadow {
+    box-shadow: 0 0 40px #f5f227;
+    opacity: 1;
+  }
+
+  .timer {
+    margin-bottom: 30px;
+    /* margin-bottom: 10px; */
+    margin-left: 70px;
+    text-align: center;
+    border: 1px solid black;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    padding-top: 20px;
+    font-family: "Arial", sans-serif;
+    font-size: medium;
+    color: #ff4500;
+    background-color: #000000;
+  }
+
+  .reponse > button {
+    border: none;
+    width: 4rem;
+    height: 3rem;
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-right: 20px;
+    color: aliceblue;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 300;
+    transition:
+      background-color 0.3s ease,
+      transform 0.2s; /* Animation douce */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .vrai {
+    display: none;
+    background-color: rgb(4, 100, 4);
+  }
+  .faux {
+    display: none;
+    background-color: rgb(201, 28, 28);
+  }
+
+  .start {
+    background-color: #2846b5;
+    color: white;
+  }
 }
 /* <!-- http://localhost/quizz/Game_Interface.php --> */
