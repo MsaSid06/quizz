@@ -1,4 +1,4 @@
-# Quiz App
+# Quizz App
 
 ## Description
 
