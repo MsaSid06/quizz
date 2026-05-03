@@ -1,6 +1,7 @@
 <?php
 
-$destination  = __DIR__ . "\\dossier_Fichier\\Quizz.json" ;
+// $destination  = __DIR__ . "\\dossier_Fichier\\Quizz.json" ;
+$destination  = __DIR__ . "/dossier_Fichier/Quizz.json" ;
 // var_dump($_FILES);
 if (!empty($_FILES['Fichier']["name"])) {
     if (verifier_Type_fichier()) {
