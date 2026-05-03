@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: radial-gradient(
+    ellipse at 60% 20%,
+    #1a1060 0%,
+    #0a0a2e 50%,
+    #050518 100%
+  );
+  font-family: "Inter", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 48px 40px;
+  width: 420px;
+  max-width: 95vw;
+  text-align: center;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.trophy {
+  font-size: 56px;
+  margin-bottom: 8px;
+  filter: drop-shadow(0 0 18px #f5c518aa);
+}
+
+h2 {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  margin-bottom: 28px;
+}
+
+.timer-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 100px;
+  padding: 8px 18px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  margin-bottom: 28px;
+}
+
+.timer-pill svg {
+  width: 16px;
+  height: 16px;
+  opacity: 0.7;
+}
+
+.timer-pill strong {
+  color: rgb(255, 6, 6);
+}
+
+.etoile {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.etoile span {
+  font-size: 90px;
+  color: rgba(255, 255, 255, 0.15);
+  transition:
+    color 0.3s,
+    transform 0.3s,
+    filter 0.3s;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.etoile span.lit {
+  color: #f5c518;
+  filter: drop-shadow(0 0 10px #f5c51880);
+  transform: scale(1.08);
+}
+
+.etoile span:hover {
+  transform: scale(1.15);
+}
+
+.score-row {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.score-box {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 12px 20px;
+}
+
+.score-box .val {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.score-box .lbl {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.action {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #6c63ff, #a78bfa);
+  border: none;
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 14px;
+  cursor: pointer;
+  transition:
+    opacity 0.2s,
+    transform 0.1s;
+}
+
+.btn-primary:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 15px;
+  font-weight: 500;
+  padding: 13px;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.35);
+}

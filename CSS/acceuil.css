@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@700;800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --accent: #6b6bd0;
+  --accent-glow: rgba(107, 107, 208, 0.25);
+  --border: rgba(255, 255, 255, 0.12);
+  --bg: #080810;
+  --surface: rgba(255, 255, 255, 0.03);
+}
+
+body {
+  color: white;
+  background-color: var(--bg);
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Space Mono", monospace;
+
+  /* Subtle grid background */
+  background-image:
+    linear-gradient(rgba(107, 107, 208, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(107, 107, 208, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+#fichier {
+  display: none;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  padding: 2rem;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+
+  width: 70vw;
+  max-width: 680px;
+  height: 70vh;
+  max-height: 480px;
+
+  border: 1.5px dashed var(--border);
+  border-radius: 20px;
+  background: var(--surface);
+  backdrop-filter: blur(8px);
+
+  font-family: "Syne", sans-serif;
+  font-size: clamp(0.95rem, 2vw, 1.15rem);
+  font-weight: 700;
+  text-align: center;
+  padding: 2.5rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+
+  cursor: pointer;
+  transition:
+    border-color 0.3s ease,
+    color 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.25s ease;
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* Upload icon via pseudo-element */
+.label::before {
+  content: "↑";
+  display: block;
+  font-size: 2.8rem;
+  color: rgba(255, 255, 255, 0.2);
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+  line-height: 1;
+}
+
+.label:hover {
+  border-color: var(--accent);
+  color: white;
+  background: rgba(107, 107, 208, 0.07);
+  box-shadow:
+    0 0 40px var(--accent-glow),
+    inset 0 0 60px rgba(107, 107, 208, 0.04);
+  transform: translateY(-3px);
+}
+
+.label:hover::before {
+  color: var(--accent);
+  transform: translateY(-4px);
+}
+
+#file-name {
+  max-width: 90%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 10px;
+  font-size: 0.8rem;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+}
+
+#submit {
+  width: clamp(160px, 30vw, 280px);
+  height: 52px;
+  border-radius: 12px;
+  border: 1.5px solid var(--border);
+  background: transparent;
+  color: white;
+  font-family: "Syne", sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  position: relative;
+  overflow: hidden;
+  transition:
+    border-color 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.2s ease;
+}
+
+#submit::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* background: linear-gradient(135deg, var(--accent), #9b6bd0); */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  /* color: rgb(25, 24, 24); */
+  z-index: 0;
+}
+
+#submit span,
+#submit {
+  position: relative;
+  color: rgb(25, 24, 24);
+  z-index: 1;
+}
+
+#submit:hover {
+  border-color: var(--accent);
+  /* color: rgb(25, 24, 24); */
+  box-shadow: 0 0 24px var(--accent-glow);
+  transform: translateY(-2px);
+}
+
+#submit:hover::before {
+  /* color: rgb(25, 24, 24); */
+  opacity: 1;
+}
+
+#submit:active {
+  /* color: rgb(25, 24, 24); */
+  transform: translateY(0px) scale(0.98);
+}
