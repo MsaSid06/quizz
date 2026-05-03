@@ -1,6 +1,18 @@
 <?php
 
 
+function ajouter_visite()
+{
+    $fichier = __DIR__.DIRECTORY_SEPARATOR.'data'. DIRECTORY_SEPARATOR.'visite.txt';
+    $compteur = 1 ;
+    if (file_exists($fichier)) {
+        $compteur = (int) file_get_contents($fichier);
+        $compteur++;
+    }
+    file_put_contents($fichier, $compteur);
+}
+
+
 // file_exists()
 /**
  * extraire puis decoder le contenu d'un json

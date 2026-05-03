@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Résultat</title>
     <link rel="stylesheet" href="./CSS/Resultat.css">
 </head>
+
 <body>
+    <?php require_once __DIR__ . DIRECTORY_SEPARATOR.'function.php';
+    ajouter_visite();
+    ?>
     <div class="card">
         <div class="trophy">🏆</div>
         <h2>Résultat du Quizz</h2>
@@ -14,8 +19,8 @@
 
         <div class="timer-pill">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10"/>
-                <polyline points="12 6 12 12 16 14"/>
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
             </svg>
             Temps restant : <strong class="reste"></strong>
         </div>
@@ -41,12 +46,14 @@
         <div class="action">
             <button type="button" class="btn-primary">▶ Continuer ce Quizz</button>
             <button type="button" class="btn-secondary">⇄ Charger un autre Quizz</button>
-            <button type="button" class="btn-secondary">by Msa_Sid :  <a href="https://github.com/MsaSid06/quizz">Github</a></button>
-             
+            <button type="button" class="btn-secondary">by Msa_Sid : <a
+                    href="https://github.com/MsaSid06/quizz">Github</a></button>
+
         </div>
     </div>
 
 </body>
 <script src="./Js/Resultat.js"></script>
+
 </html>
 <!-- // http://localhost/quizz/Resultat.php -->
